@@ -1,5 +1,5 @@
 var main = require('../main/main.js');
-var fixture = require('spec/fixture.js');
+var fixture = require('../test/fixture.js');
 var print = require('../main/buildLcdDigits.js');
 
 describe('LCD', function () {
@@ -31,7 +31,7 @@ describe("unit test", function () {
     describe('buildInputs', function () {
         var inputs = 910;
 
-        it(' print correct text', function () {
+        it(' should print correct text', function () {
 
             var expectText = [
                 '9', '1', '0'
@@ -52,7 +52,7 @@ describe("unit test", function () {
             inputs1 = ['2', '3', '4', '5'];
         });
 
-        it(' print correct text', function () {
+        it(' should print correct text', function () {
 
             var expectText = [
                 {value: ['._.', '|_|', '..|']},
@@ -63,7 +63,7 @@ describe("unit test", function () {
             expect(print.buildLcd(inputs, allLcds)).toEqual(expectText);
         });
 
-        it(' print correct text', function () {
+        it(' should print correct text', function () {
 
             var expectText = [
                 {value: ['._.', '._|', '|_.']},
@@ -83,7 +83,7 @@ describe("unit test", function () {
             {value: ['._.', '|.|', '|_|']}
         ];
 
-        it(' print correct text', function () {
+        it('should print correct text', function () {
 
             var expectText =
                 '._. ' + '... ' + '._. ' + '\n' +
